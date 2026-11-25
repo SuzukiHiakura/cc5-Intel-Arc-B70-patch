@@ -37,7 +37,7 @@ The original CC5 executable reached the default workspace through the repaired r
 
 In a cold-start test with a 264,599,250-byte avatar, CC5 reported the avatar filename in its title bar after about 55 seconds. Its scene API returned the base character name and all eight saved body morph values matched exactly. A separate test in a running CC5 session also matched all eight sliders.
 
-The user reported seeing the default in the viewport. The test draft changes arm and waist proportions on a stock clothed character and retains the stock face, hair and outfit. The recorded checks establish startup and morph readback. The visible result is unverified. The readiness check recognizes both project and avatar window titles. Testing covers one CC5 build and installation.
+A window capture after loading showed HD Ariana in her stock dress, as reported by the user. The test draft changes arm and waist proportions and retains the stock face, hair and outfit. The screenshot confirms a visible character. The eight slider values were checked separately, and visual likeness to the reference was not established. The readiness check recognizes both project and avatar window titles. Testing covers one CC5 build and installation.
 
 `Test-Repair.ps1` uses a temporary registry key belonging to the current user. It checks install, repeat install, protection of changed values, rollback and repeat rollback.
 
