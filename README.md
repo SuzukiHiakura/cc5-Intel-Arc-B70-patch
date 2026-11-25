@@ -35,7 +35,9 @@ The local result is recorded in `%LOCALAPPDATA%\CC5 Startup Patch\last-open.json
 
 The original CC5 executable reached the default workspace through the repaired registration on the B70. The source executable SHA-256 was `0e5a23bdb0abf04efcc14218a272e3659e16e09c64702b531af8546a23dec3df`.
 
-With CC5 closed, Windows Explorer's Open action loaded a 264,599,250-byte native avatar in about 55 seconds. CC5 showed the avatar filename in its title bar, returned the expected character, and all eight fitted body morphs matched the saved values exactly. A separate test in an already running CC5 session also matched all eight sliders. The cold-start test used this release's host-timer implementation. The readiness check recognizes both project and avatar window titles. Other CC5 builds, multi-user installations, and rendering performance have not been qualified.
+In a cold-start test with a 264,599,250-byte avatar, CC5 reported the avatar filename in its title bar after about 55 seconds. Its scene API returned the base character name and all eight saved body morph values matched exactly. A separate test in a running CC5 session also matched all eight sliders.
+
+The user reported seeing the default in the viewport. The test draft changes arm and waist proportions on a stock clothed character and retains the stock face, hair and outfit. The recorded checks establish startup and morph readback. The visible result is unverified. The readiness check recognizes both project and avatar window titles. Testing covers one CC5 build and installation.
 
 `Test-Repair.ps1` uses a temporary registry key belonging to the current user. It checks install, repeat install, protection of changed values, rollback and repeat rollback.
 
